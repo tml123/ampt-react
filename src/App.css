@@ -1,0 +1,15 @@
+.ui.grid {
+   min-height: 100vh !important;
+ }
+
+.mgn-0 {
+  margin: 0 !important;
+}
+
+.pd-0 {
+  padding: 0 !important;
+}
+
+.ht-100pct {
+  min-height: 100% !important;
+}
