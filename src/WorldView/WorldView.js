@@ -53,25 +53,25 @@ export default class WorldView extends React.Component {
     return (
       <Grid className='mgn-0' columns={16}>
         <Grid.Column className='mgn-0 pd-0' stretched={true} width={3}>
-            <Accordion as={Menu} className='bdr-rd-0' width='thin' fluid vertical>
-              {
-                satellites.map((s, idx) => {
-                  return (
-                    <Menu.Item>
-                      <AccordionTitleCheckbox index={idx}>
-                        <Checkbox label={s.name} name={s.name} onClick={this.getOrbitData}/>
-                        <IconWithIndex index={idx} name='dropdown' onClick={this.toggleAccordionContent}/>
-                      </AccordionTitleCheckbox>
-                      <Accordion.Content active={this.state.activePanes.indexOf(idx) > -1}>
-                        <div style={{'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'space-around'}}>
-                          {s.feeds.map((f) => <Checkbox label={f}/>)}
-                        </div>
-                      </Accordion.Content>
-                    </Menu.Item>
-                  )
-                })
-              }
-            </Accordion>
+          <Accordion as={Menu} className='bdr-rd-0' width='thin' fluid vertical>
+            {
+              satellites.map((s, idx) => {
+                return (
+                  <Menu.Item>
+                    <AccordionTitleCheckbox index={idx}>
+                      <Checkbox label={s.name} name={s.name} onClick={this.getOrbitData}/>
+                      <IconWithIndex index={idx} name='dropdown' onClick={this.toggleAccordionContent}/>
+                    </AccordionTitleCheckbox>
+                    <Accordion.Content active={this.state.activePanes.indexOf(idx) > -1}>
+                      <div style={{'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'space-around'}}>
+                        {s.feeds.map((f) => <Checkbox label={f}/>)}
+                      </div>
+                    </Accordion.Content>
+                  </Menu.Item>
+                )
+              })
+            }
+          </Accordion>
         </Grid.Column>
         <Grid.Column className='mgn-0 pd-0' width={13}>
           <ReactCesium returnCesium={this.returnCesium}/>

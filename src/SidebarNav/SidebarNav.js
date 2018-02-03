@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Icon, Menu, Sidebar } from 'semantic-ui-react';
+import { Icon, Menu } from 'semantic-ui-react';
 
 import './styles.css';
 
@@ -37,6 +37,14 @@ export default class SidebarNav extends React.Component {
           active={activeItem === 'worldView'}
           onClick={this.handleItemClick}>
           <Icon name='globe' />
+        </Menu.Item>
+        <Menu.Item
+          as={NavLink}
+          to="/timeline"
+          name='timeline'
+          active={activeItem === 'timeline'}
+          onClick={this.handleItemClick}>
+          <Icon name='calendar' />
         </Menu.Item>
       </Menu>
     )
