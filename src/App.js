@@ -1,7 +1,7 @@
 import React from 'react';
 import SidebarNav from './SidebarNav/SidebarNav';
 import Routes from './Routes/Routes';
-import { Container, Grid, Segment } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import './App.css';
 
 const AppLayout = () => (

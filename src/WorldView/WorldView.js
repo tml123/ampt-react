@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactCesium from '../ReactCesium/ReactCesium';
-import { Accordion, Container, Checkbox, Grid, Icon, Menu } from 'semantic-ui-react';
+import { Accordion, Checkbox, Grid, Menu } from 'semantic-ui-react';
 import Cesium from 'cesium/Cesium';
 import axios from 'axios';
 

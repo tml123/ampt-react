@@ -13,3 +13,7 @@
 .ht-100pct {
   min-height: 100% !important;
 }
+
+.oflow-scr {
+  overflow-y: scroll;
+}
