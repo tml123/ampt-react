@@ -6,7 +6,7 @@ const mocks = {
 
   }),
   Activity: () => ({
-    tasK_id: casual.zip,
+    task_id: casual.zip,
     start_timestamp: casual.unix_time,
     stop_timestamp: casual.unix_time,
     target_description: casual.description

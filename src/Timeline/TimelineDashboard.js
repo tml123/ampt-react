@@ -7,7 +7,6 @@ export default class TimelineDashboard extends React.Component {
 
   constructor(props){
     super(props);
-    console.log(props);
     this.state = {
       dataSet: '',
       groups: '',
@@ -83,7 +82,7 @@ export default class TimelineDashboard extends React.Component {
             <Button>New Activity</Button>
           </Menu.Item>
         </Menu>
-        <Segment as={Container} fluid loading={this.state.loading} className="mgn-0 pd-0" secondary>
+        <Segment as={Container} fluid loading={this.state.loading} className="mgn-0 pd-0" secondary style={{maxHeight: window.innerHeight}}>
           {this.state.dataSet && <TimelineView dataSet={this.state.dataSet} groups={this.state.groups} />}
         </Segment>
       </Container>

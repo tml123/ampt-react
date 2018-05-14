@@ -4,11 +4,17 @@ import { Activity } from './models';
 const resolvers = {
   Query: {
     allActivities() {
-      console.log(Activity.find());
       return Activity.find({})
         .then((result) => {
           return result;
         });
+    },
+    activity(obj, args) {
+      console.log(args);
+      return Activity.find(args)
+        .then((result) => {
+          return result;
+        })
     }
   }
 }

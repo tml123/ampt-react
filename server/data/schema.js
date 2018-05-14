@@ -4,7 +4,8 @@ import resolvers from './resolvers';
 
 const typeDefs = `
 type Query {
-  allActivities: [Activity]
+  allActivities: [Activity],
+  activity(task_id: Int, pri: Int, asset: String): [Activity]
 }
 
 type Activity {
@@ -12,7 +13,7 @@ type Activity {
   task_name: String,
   sub_task_id: String,
   target_description: String,
-  pri: Int,
+  pri: Float,
   start_timestamp: Int,
   stop_timestamp: Int,
   asset: String,
